@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Login Page</title>
+  <link rel="stylesheet" href="login.css">
+  <link rel="icon" type="image" href="logooo.png">
+</head>
+<body class="bg">
+  <div class="container">
+    <img src="logo.png" alt="logo" class="logo">
+    <h2 class="title">Login to your account</h2>
+    <form class="form" id="login-form" action="home.html">
+      <div class="input-field">
+        <input type="text" id="login-username" required autocomplete="off" pattern="Francine|Jonaldine|Dennis|Erwin|Josh">
+        <label for="login-username">Username</label>
+      </div>
+
+      <div class="input-field">
+        <input type="password" id="login-password" required autocomplete="off" pattern="pft123">
+        <label for="login-password">Password</label>
+      </div>
+      <p class="error" id="login-error"></p>
+      <button type="submit" class="btn" id="login-btn">Login</button>
+    </form>
+  </div>
+  <script src="login.js"></script>
+</body>
+</html>

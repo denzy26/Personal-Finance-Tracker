@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* { padding: 0; margin: 0; box-sizing: border-box; font-family: 'Poppins', Arial, sans-serif; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(gradient.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  background: rgba(30, 103, 40, 0.5);
+  border-radius: 16px;
+  padding: 40px 44px;
+  width: 100%;
+  max-width: 360px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.35);
+  text-align: center;
+  backdrop-filter: blur(20px);
+  box-shadow: 5px 5px 20px #228051;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+  border: 3px solid #f5a800;
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #d7f1e4;
+  margin-bottom: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-field {
+  position: relative;
+  text-align: left;
+}
+
+.input-field input {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  border: 1.5px solid #c8e6c9;
+  outline: none;
+  letter-spacing: 0.5px;
+}
+
+.input-field input:focus,
+.input-field input:valid {
+  border-color: #003d1f;
+}
+
+.input-field label {
+  position: absolute;
+  color: #888;
+  pointer-events: none;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.25s ease;
+  background: transparent;
+  font-size: 0.9rem;
+}
+
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
+  top: 0;
+  transform: translateY(-50%) scale(0.82);
+  background: white;
+  padding: 0 5px;
+  color: #003d1f;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.btn {
+  padding: 12px;
+  background: #003d1f;
+  color: #f5a800;
+  border: 2px solid #003d1f;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn:hover {
+  background: #f5a800;
+  color: #003d1f;
+  border-color: #f5a800;
+}
+
+.auth-switch {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.auth-switch a {
+  color: #003d1f;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-switch a:hover { text-decoration: underline; }
+
+.error {
+  color: #c0392b;
+  font-size: 0.8rem;
+  min-height: 1em;
+  margin: -10px 0;
+}

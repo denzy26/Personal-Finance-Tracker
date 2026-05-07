@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transaction</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logooo.png">
+</head>
+<body>
+
+  <nav>
+    <img src="logo.png" alt="PFT Logo" class="logo">
+    <div class="nav-links">
+      <a href="home.html">HOME</a>
+      <a href="about.html">ABOUT OUR PAGE</a>
+      <a href="menu.html">MENU</a>
+    </div>
+  </nav>
+
+  <main class="about-main">
+    <a href="dashboard.html" class="back-link">← Back</a>
+    <h2 class="page-title">NEW TRANSACTION</h2>
+
+    <div class="description-box" style="max-width:480px; margin: 0 auto 20px auto;">
+
+      <div class="form-group">
+        <label>Type</label>
+        <div class="toggle-group">
+          <button class="toggle active" id="btn-income">Income</button>
+          <button class="toggle" id="btn-expense">Expense</button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Amount (₱)</label>
+        <input type="number" id="amount" placeholder="0.00">
+      </div>
+
+      <div class="form-group">
+        <label>Category</label>
+        <select id="category">
+          <option value="">Select category</option>
+          <option>Salary</option>
+          <option>Food</option>
+          <option>Transport</option>
+          <option>Utilities</option>
+          <option>Entertainment</option>
+          <option>Health</option>
+          <option>Shopping</option>
+          <option>Others</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Date</label>
+        <input type="date" id="date">
+      </div>
+
+      <div class="form-group">
+        <label>Notes</label>
+        <input type="text" id="desc" placeholder="Add a note...">
+      </div>
+
+      <p class="error" id="error"></p>
+      <button class="btn-solid full" id="save-btn">Save Transaction</button>
+      <button class="btn-outline full" onclick="window.location.href='dashboard.html'">Cancel</button>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

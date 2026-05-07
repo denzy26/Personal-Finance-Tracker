@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logooo.png">
+  <title>Menu</title>
+</head>
+<body>
+
+  <nav>
+    <img src="logo.png" alt="PFT Logo" class="logo">
+    <div class="nav-links">
+      <a href="home.html">HOME</a>
+      <a href="about.html">ABOUT OUR APP</a>
+      <a href="menu.html" class="active">MENU</a>
+    </div>
+  </nav>
+
+  <main class="about-main">
+    <a href="home.html" class="back-link">← Back</a>
+    <h2 class="page-title">MENU</h2>
+
+    <div class="menu-grid">
+
+      <!-- Monthly Summary -->
+      <div class="menu-card" onclick="menuOpenModal('modal-summary')" style="cursor:pointer;">
+        <div class="menu-icon">📅</div>
+        <h3>Monthly Summary</h3>
+        <p>Review income, expenses & balance by month</p>
+      </div>
+
+      <!-- Categories -->
+      <div class="menu-card" onclick="menuOpenModal('modal-categories')" style="cursor:pointer;">
+        <div class="menu-icon">🏷️</div>
+        <h3>Add Categories</h3>
+        <p>Manage custom categories for transactions</p>
+      </div>
+
+      <!-- Logout -->
+      <div class="menu-card" id="logout-card" style="cursor:pointer; border-top-color:#c0392b;">
+        <div class="menu-icon">🚪</div>
+        <h3 style="color:#c0392b;">Logout</h3>
+        <p>Sign out of your account</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- MONTHLY SUMMARY MODAL -->
+  <div class="menu-modal-overlay" id="modal-summary">
+    <div class="menu-modal">
+      <button class="menu-modal-close" onclick="menuCloseModal('modal-summary')">✕</button>
+      <h2>📅 Monthly Summary</h2>
+
+      <div class="sum-period-row">
+        <select id="sum-month">
+          <option value="0">January</option>
+          <option value="1">February</option>
+          <option value="2">March</option>
+          <option value="3">April</option>
+          <option value="4">May</option>
+          <option value="5">June</option>
+          <option value="6">July</option>
+          <option value="7">August</option>
+          <option value="8">September</option>
+          <option value="9">October</option>
+          <option value="10">November</option>
+          <option value="11">December</option>
+        </select>
+        <select id="sum-year"></select>
+      </div>
+
+      <div class="sum-stat-row">
+        <div class="sum-stat">
+          <div class="s-label">Income</div>
+          <div class="s-val s-income" id="sum-income">₱0.00</div>
+        </div>
+        <div class="sum-stat">
+          <div class="s-label">Expenses</div>
+          <div class="s-val s-expense" id="sum-expense">₱0.00</div>
+        </div>
+        <div class="sum-stat">
+          <div class="s-label">Balance</div>
+          <div class="s-val s-balance" id="sum-balance">₱0.00</div>
+        </div>
+      </div>
+
+      <div id="sum-list" class="sum-list">
+        <div class="sum-empty">Select a month to view transactions.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CATEGORIES MODAL -->
+  <div class="menu-modal-overlay" id="modal-categories">
+    <div class="menu-modal">
+      <button class="menu-modal-close" onclick="menuCloseModal('modal-categories')">✕</button>
+      <h2>🏷️ Categories</h2>
+
+      <div id="cat-list" class="cat-list"></div>
+
+      <div class="cat-add-row">
+        <input type="text" id="cat-input" placeholder="New category name…" maxlength="30">
+        <select id="cat-type">
+          <option value="both">Both</option>
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+        <button class="cat-add-btn" onclick="menuAddCategory()">+ Add</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOGOUT CONFIRM MODAL -->
+  <div class="menu-modal-overlay" id="modal-logout">
+    <div class="menu-modal" style="max-width:360px;">
+      <button class="menu-modal-close" onclick="menuCloseModal('modal-logout')">✕</button>
+      <h2>Log Out</h2>
+      <div class="logout-modal-body">
+        <div class="logout-icon">🚪</div>
+        <p>Are you sure you want to sign out of your account?</p>
+        <div class="logout-btn-row">
+          <button class="btn-cancel-logout" onclick="menuCloseModal('modal-logout')">Cancel</button>
+          <button class="btn-confirm-logout" onclick="menuConfirmLogout()">Yes, Log Out</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast notification -->
+  <div id="pft-toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
