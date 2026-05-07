@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  background-color: #d0d0d0;
+  color: #222;
+}
+
+.back-btn { 
+  display:inline-block; 
+  margin:16px 0 0 16px; 
+  padding:8px 20px; 
+  background:#003d1f; 
+  color:#f5a800; 
+  border:none; 
+  border-radius:50px; 
+  font-size:0.9rem; 
+  font-weight:600; 
+  cursor:pointer; 
+  text-decoration:none; }
+    
+.back-btn:hover { background:#f5a800; color:#003d1f; }
+
+.page {
+  width: 770px;
+  min-height: 1000px;
+  background-color: #ffffff;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.top-bar {
+  height: 20px;
+  background: linear-gradient(to right, #7a1a28, #c8964a);
+}
+
+.header-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.header-band {
+  background: linear-gradient(to right, #7a1a28, #c8964a);
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 16px 30px 16px 140px;
+  border-radius: 25px;
+}
+
+.header-name p {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 45px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-left: 100px;
+}
+
+.photo-circle {
+  position: absolute;
+  top: 10px;   
+  left: 35px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background-color: #c8b87a;
+  border: 5px solid #c8b87a;
+  overflow: hidden;
+}
+
+.photo-circle img {
+  width: 100%;
+  height: 100%;
+}
+
+.body {
+  display: flex;
+  padding: 20px 30px 0 30px;
+  gap: 30px;
+}
+
+.left-col {
+  width: 40%;
+  padding-top: 12px;
+}
+
+.right-col {
+  flex: 1;
+  padding-top: 12px;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: bolder;
+  color: #2a2a8a;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  line-height: 19px;
+  margin-bottom: 4px;
+}
+
+.title-line {
+  border: none;
+  border-top: 1.5px solid #2a2a8a;
+  margin-bottom: 15px;
+}
+
+.label{
+  font-weight: 500;
+  line-height: 15px;
+  font-size: 12px;
+}
+
+.info-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.info-table td {
+  padding: 2px 4px;
+  vertical-align: top;
+  font-size: 12px;
+}
+
+.info-table .label {
+  white-space: nowrap;
+  padding-right: 8px;
+  color: #333;
+}
+
+.contact-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.contact-table td {
+  padding: 5px 4px;
+  vertical-align: middle;
+  font-size: 12px;
+}
+
+.about-text {
+  font-size: 12px;
+  line-height: 1.7;
+  text-align: justify;
+  font-weight: 500;
+}
+
+.edu-level {
+  font-weight: bolder;
+  font-size: 12.5px;
+  margin-top: 10px;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.edu-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.edu-table td {
+  font-size: 12px;
+  padding: 1px 4px;
+}
+
+.skills-section {
+  padding: 8px 30px 16px 30px;
+}
+
+.skills-list {
+  list-style: disc;
+  padding-left: 22px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.bottom-bar {
+  height: 20px;
+  background: linear-gradient(to right, #7a1a28, #c8964a);
+  margin-top: auto;
+}
+
+.page2-body {
+  padding: 24px 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.trainings-list {
+  list-style: disc;
+  padding-left: 22px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.references-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.ref-col {
+  width: 50%;
+  vertical-align: top;
+  padding: 4px 6px;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.ref-name {
+  font-weight: bolder;
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+
+.certification {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 20px 10px 10px 10px;
+}
+
+.cert-text {
+  font-size: 12px;
+  max-width: 55%;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.cert-sign {
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.5;
+}
