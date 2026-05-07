@@ -435,5 +435,5 @@ function menuRenderSummary() {
 function menuConfirmLogout() {
   localStorage.removeItem('pft_logged_in');
   localStorage.removeItem('pft_current_user');
-  window.location.href = 'login.html';
+  window.location.href = 'index.html';
 }
